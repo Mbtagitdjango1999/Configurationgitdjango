@@ -63,7 +63,7 @@ STATIC_URL = config('STATIC_URL')
 
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR , 'STATIC_DIR')
+    os.path.join(BASE_DIR , 'STATIC_DIR'),
     )
 
 STATIC_ROOT =os.path.join(BASE_DIR , config('COLLECT_STATIC_DIR'))
@@ -78,6 +78,6 @@ DEFAULT_AUTO_FIELD= 'django.db.models.AutoField'
 
 
 
-FIXTURS_DIRS= tuple(
-    config('FIXTURE_TEST_DIRS',cast=tuple)
-)
+# FIXTURS_DIRS= tuple(
+#     config('FIXTURE_TEST_DIRS',cast=tuple)
+# )
