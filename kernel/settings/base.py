@@ -63,7 +63,7 @@ STATIC_URL = config('STATIC_URL')
 
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR , 'STATIC_DIR'),
+    os.path.join(BASE_DIR , config('STATIC_DIR')),
     )
 
 STATIC_ROOT =os.path.join(BASE_DIR , config('COLLECT_STATIC_DIR'))
