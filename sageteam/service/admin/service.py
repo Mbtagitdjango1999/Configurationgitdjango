@@ -1,14 +1,9 @@
 from django.contrib import admin
-from .models import Service ,ServiceAttachment
+#from ..models.service import Service 
+from sageteam.service.models import Service
 from django.utils.translation import gettext_lazy as _
 
 # Register your models here.
-
-@admin.register(ServiceAttachment)
-class ServiceAttachmentAdmin(admin.ModelAdmin):
-    list_display = (
-        'title',
-                    )
 
 
 @admin.register(Service)

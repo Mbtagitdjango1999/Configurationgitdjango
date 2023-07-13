@@ -1,7 +1,7 @@
 from kernel.settings.base import DEFAULT_APPS
 
 BUSINESS_APPS=[
-   'service',
+   'sageteam.service',
   
 ]
 

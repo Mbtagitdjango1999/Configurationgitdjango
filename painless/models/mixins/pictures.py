@@ -2,17 +2,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-class TimestampMixin(models.Model):
-    class Meta :
-        abstract = True
-        
-    
-    created = models.DateTimeField(_("Created"),auto_now_add=True,help_text='auto insertion')
-    modified = models.DateTimeField(_("Modified"),auto_now=True,help_text='auto mification')
-        
-
-
-
 class  PictureOperationMixin(models.Model):
     
     class Meta :
@@ -50,4 +39,4 @@ class  BannerOperationMixin(models.Model):
     banner_alternate_text = models.CharField(
         max_length=110,
         help_text= 'Description about picture that is uploaded.'
-    )           
+    )        
