@@ -1,10 +1,21 @@
 from django.contrib import admin
 #from ..models.service import Service 
-from sageteam.service.models import Service
+from sageteam.service.models import Service,ServiceAttachment
 from django.utils.translation import gettext_lazy as _
 
 # Register your models here.
 
+#this field for many to one relatrion from oneeeee to manyyyyyyy
+class AttachmentInlineAdmin(admin.StackedInline):
+    model = ServiceAttachment
+    #this is for count of attachment for any service
+    min_num = 1
+    extra = 4
+    max_num = 3
+    verbose_name = _("Attttaachhmennnnt")
+    verbose_name_pulral = _("Attttaachhmennnnts")
+    can_delete = False
+    show_change_link = True 
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
@@ -29,6 +40,14 @@ class ServiceAdmin(admin.ModelAdmin):
     )
     
     save_on_top =True
+    
+    #this field for Inlineeeee relations
+    inlines = (
+        AttachmentInlineAdmin,
+        
+    )
+    
+    
     
     
     

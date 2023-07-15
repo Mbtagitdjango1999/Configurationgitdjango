@@ -21,7 +21,8 @@ class TitleSlugMixin(models.Model):
     slug = models.SlugField(_("Slug"),max_length=110,editable=False,allow_unicode = True,help_text=_("sluggggg"))
     
     class Meta:
-        abstrcat = True
+        
+        abstract = True
          
          
          
@@ -30,5 +31,6 @@ class TitleSlugDescriptionMixin(TitleSlugMixin):
     description = models.TextField(_("Description"),help_text=_("Long description"),)
     
     class Meta:
-        abstrcat = True
+        
+        abstract = True
                   

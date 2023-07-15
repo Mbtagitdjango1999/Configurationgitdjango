@@ -9,4 +9,14 @@ from sageteam.service.models import ServiceAttachment
 class ServiceAttachmentAdmin(admin.ModelAdmin):
     list_display = (
         'title',
+        'created',
+        'modified',
                     )
+    
+    
+    
+    list_filter = (
+        
+        'created',
+        'modified',
+    )
